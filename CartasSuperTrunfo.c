@@ -20,10 +20,10 @@
         printf("Vamos cadastrar a primeira carta.\n");
 
         printf("Digite o nome do estado:\n");
-        scanf("%s[50]", &estado1);
+        scanf(" %[^\n]", &estado1);
 
         printf("Digite o nome da cidade:\n");
-        scanf("%s", &cidade1);
+        scanf(" %[^\n]", &cidade1);
 
         printf("Digite o código da carta\n");
         scanf("%3s", &cod1);
@@ -40,11 +40,38 @@
         printf("Quantos pontos turísticos tem a cidade\n");
         scanf("%d", &turismo1);
 
-        //resultado cidade 1
+// dados cidade 2
 
-        printf("Primeira carta cadastrada. Vejamos:\n");
-        printf("Estado: %s\nCidade: %s\nCodigo: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n",estado1, cidade1, cod1, populacao1, area1, pib1, turismo1);
+        printf("Vamos cadastrar a segunda carta.\n");
 
+        printf("Digite o nome do estado:\n");
+        scanf(" %[^\n]", &estado2);
+
+        printf("Digite o nome da cidade:\n");
+        scanf(" %[^\n]", &cidade2);
+
+        printf("Digite o código da carta\n");
+        scanf("%3s", &cod2);
+
+        printf("Digite a população da cidade:\n");
+        scanf("%d", &populacao2);
+
+        printf("Digite área da cidade:\n");
+        scanf("%f", &area2);
+
+        printf("Digite o PIB da cidade:\n");
+        scanf("%f", &pib2);
+
+        printf("Quantos pontos turísticos tem a cidade\n");
+        scanf("%d", &turismo2);
+
+// resultado cartas
+
+printf("Cartas cadastradas. Vejamos:\n");
+printf("Primeira carta:\n");
+printf("Estado: %s\nCidade: %s\nCodigo: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", estado1, cidade1, cod1, populacao1, area1, pib1, turismo1);
+printf("Segunda carta:\n");
+printf("Estado: %s\nCidade: %s\nCodigo: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", estado2, cidade2, cod2, populacao2, area2, pib2, turismo2);
 
         return 0;
 }
