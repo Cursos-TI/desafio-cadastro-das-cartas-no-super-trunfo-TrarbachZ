@@ -7,12 +7,15 @@ int main() {
 
     char estado1[50], estado2[50];
     char cidade1[50], cidade2[50];
+    char cod1[3], cod2[3];
     int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int turismo1, turismo2;
-
-    // dados cidade 1
+    float dens1, dens2;
+    float pibc1, pibc2;
+  
+// dados cidade 1
 
     printf("Vamos cadastrar a primeira carta.\n");
 
@@ -34,9 +37,8 @@ int main() {
     printf("Quantos pontos turísticos tem a cidade?\n");
     scanf("%d", &turismo1);
 
+// dados cidade 2
 
-    // dados cidade 2
-    
     printf("Vamos cadastrar a segunda carta.\n");
 
     printf("Digite o nome do estado:\n");
@@ -57,15 +59,28 @@ int main() {
     printf("Quantos pontos turísticos tem a cidade?\n");
     scanf("%d", &turismo2);
 
-    // resultado cartas
+// calculo das variaveis
+
+dens1 = area1 / populacao1;
+dens2 = area2 / populacao2;
+pibc1 = pib1 / populacao1;
+pibc2 = pib2 / populacao2;
+
+// resultado cartas
 
     printf("Cartas cadastradas. Vejamos:\n");
+
     printf("Primeira carta:\n");
     printf("Estado: %s\nCidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", 
            estado1, cidade1, populacao1, area1, pib1, turismo1);
+    printf("Densidade da primeira cidade: %.2f\n", dens1);       
+    printf("Pib per capita da primeira cidade: %.2f\n", dens1);
+
     printf("Segunda carta:\n");
     printf("Estado: %s\nCidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", 
-           estado2, cidade2, populacao2, area2, pib2, turismo2);
+           estado2, cidade2, populacao2, area2, pib2, turismo2);       
+    printf("Densidade da segunda cidade: %.2f\n", dens2);
+    printf("Pib per capita da segunda cidade: %.2f\n", dens2);  
 
     return 0;
 }
