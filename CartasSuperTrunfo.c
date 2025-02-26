@@ -87,7 +87,7 @@ pibc2 = pib2 / populacao2;
 
     densInvertida1 = 1 / dens1;
     densInvertida2 = 1 / dens2;
-    super1 = populacao1 + area1 + pib1 + densInvertida1 
+    super1 = populacao1 + area1 + pib1 + densInvertida1;
 
 
 //comparação
