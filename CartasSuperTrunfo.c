@@ -85,8 +85,8 @@ pibc2 = pib2 / populacao2;
 
 //calculo super poder (soma população, área, pib, pibc, 1/densi)
 
-    densInvertida1 = 1 / dens1; // nao entendi o proposito de fazer a densidade 1/x...
-    densInvertida2 = 1 / dens2;
+densInvertida1 = 1 / dens1; // nao entendi o proposito de fazer a densidade 1/x...
+densInvertida2 = 1 / dens2;
 
         super1 = populacao1 + area1 + pib1 + densInvertida1 + turismo1;
         super2 = populacao2 + area2 + pib2 + densInvertida2 + turismo2;
@@ -98,20 +98,55 @@ pibc2 = pib2 / populacao2;
 
     printf("Vamos comparar as duas cartas:\n(Considere 1 como carta 1 venceu e 0 como carta 2 venceu)\n");
 
-    float resultadoPopulacao, resultadoArea, resultadoPib, resultadoPibc, resultadoTurismo, resultadoDens, resultadoSuper;
+float resultadoPopulacao, resultadoArea, resultadoPib, resultadoPibc, resultadoTurismo, resultadoDens, resultadoSuper;
 
-        resultadoPopulacao = populacao1 > populacao2;
-        resultadoArea = area1 > area2;
-        resultadoPib = pib1 > pib2;
-        resultadoPibc = pibc1 > pibc2;
-        resultadoTurismo = turismo1 > turismo2;
-        resultadoDens = densInvertida1 < densInvertida2;
-        resultadoSuper = super1 > super2;
+resultadoPopulacao = populacao1 > populacao2;
+resultadoArea = area1 > area2;
+resultadoPib = pib1 > pib2;
+resultadoPibc = pibc1 > pibc2;
+resultadoTurismo = turismo1 > turismo2;
+resultadoDens = densInvertida1 < densInvertida2;
+resultadoSuper = super1 > super2;
 
-    printf("População: %.0f\nÁrea: %.0f\nPIB: %.0f\nPIB per capita: %.0f\nQuantidade de pontos turísticos: %.0f\nDensidade demográfica: %.0f\nTrunfo: %.0f\n\n",
-            resultadoPopulacao, resultadoArea, resultadoPib, resultadoPibc, resultadoTurismo, resultadoDens, resultadoSuper);
+   // printf("População: %.0f\nÁrea: %.0f\nPIB: %.0f\nPIB per capita: %.0f\nQuantidade de pontos turísticos: %.0f\nDensidade demográfica: %.0f\nTrunfo: %.0f\n\n",resultadoPopulacao, resultadoArea, resultadoPib, resultadoPibc, resultadoTurismo, resultadoDens, resultadoSuper); //codigo desutilizado para o nível 2.
 
 
+// super trunfo nivel 2: if, else
+
+    printf("Vamos analizar qual carta venceu.\nQuer comparar apenas um atributo ou todos? (Respoda com 'um' ou 'todos')");
+
+char respostaComparar;
+
+    scanf("%s", &respostaComparar);
+
+    if (respostaComparar = "um") {
+        printf("Qual atributo você quer comparar?\npopulacao, area, pib, pib per capita, quantidade de pontos turisticos, densidade populacional ou o trunfo?\n(utilize apenas minusculas)");
+
+char respostaAtributo;
+
+        scanf(" %[^\n]", &respostaAtributo);
+
+            if(respostaAtributo = "populacao") { if(resultadoPopulacao = 1) { printf("Carta 1 venceu.", ); } else { printf("Carta 2 venceu."); }}
+            } else {
+            if(respostaAtributo = "area") { if(resultadoArea = 1) { printf("Carta 1 venceu.", ); } else { printf("Carta 2 venceu."); }}   
+            } else {
+            if(respostaAtributo = "pib") { if(resultadoPib = 1) { printf("Carta 1 venceu.", ); } else { printf("Carta 2 venceu.";) }}    
+            } else {
+            if(respostaAtributo = "pib per capita") { if(resultadoPibc = 1) { printf("Carta 1 venceu."); } else { printf("Carta 2 venceu."); }}
+            } else {
+            if(respostaAtributo = "quantidade de pontos turisticos") { if(resultadoTurismo = 1) { printf("Carta 1 venceu."); } else { printf("Carta 2 venceu."); }}
+            } else {
+            if(respostaAtributo = "densidade populacional") { if(resultadoDens = 1) { printf("Carta 1 venceu."); } else { printf("Carta 2 venceu."); }}    
+            } else {
+            if(respostaAtributo = "densidade trunfo") { if(resultadoSuper = 1) { printf("Carta 1 venceu."); } else { printf("Carta 2 venceu."); }}
+            }
+
+    } else {
+    }
+
+
+
+    }
 
     return 0;
 }
